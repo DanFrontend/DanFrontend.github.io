@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+
+    <input id="search" type="text" placeholder="search text" />
+    <button id="submit" onclick="JavaScriptFetch()">Submit</button>
+    <div id="outputDiv"></div>
+
+    <script type="text/javascript">
+
+        function JavaScriptFetch() {
+  
+            var script = document.createElement('script');
+             
+            script.src = "https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=" + document.getElementById("search").value;
+             
+            document.querySelector('head').appendChild(script);
+             
+        }
+             
+        function jsonFlickrFeed(data) {
+             
+            var image = "";
+             
+            data.items.forEach(function (element) {
+             
+            image += "<img src=\"" + element.media.m + "\"/>";
+             
+            });
+             
+            document.getElementById("outputDiv").innerHTML = image;
+         
+        }
+
+    </script>
+
+      <!-- <div id="app">
+        <h1>{{ result.chartName }}</h1>
+        <ul>
+            <li v-for=" item in result.bpi">
+                {{ item.code }}: {{ item.rate_float | current}}
+            </li>
+        </ul>
+        <h1>Курс Приват Банк</h1>
+         <ul>
+            <li v-for=" valute in privat">
+                {{ valute.ccy }}: купить {{ valute.buy }} / продать {{ valute.sale }}
+            </li>
+        </ul>
+      </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    result: [],
+                    privat: []
+                }
+            },
+            mounted() {
+                axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+                .then(item => {
+                      this.result = item.data
+                 })
+                .catch(err => {
+                    throw err
+                 })
+            },
+            created() {
+                this.fetchLogs();
+            },
+            methods: {
+                fetchLogs() {
+                      axios.get(' https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
+                      .then(response => {
+                            this.privat = response.data;
+                      })
+                      .catch(err => {
+                          throw err;
+                      })
+                }
+            },
+            filters: {
+                current(value) {
+                    return value.toFixed(2)
+                }
+            }
+        })
+
+    </script> -->
+    
+    
+</body>
+</html>
