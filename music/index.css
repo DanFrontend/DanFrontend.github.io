@@ -1,0 +1,85 @@
+body {
+  margin: 0; }
+
+.muzsite {
+  background: whitesmoke; }
+
+.innerwrap {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 1170px;
+  margin: 0 auto;
+  background: #fff; }
+
+.header {
+  display: flex;
+  padding: 20px; }
+  .header-logo-item {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 24px;
+    color: #1a1a1a;
+    font-weight: bold;
+    font-family: sans-serif; }
+  .header-menu {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    list-style: none;
+    width: 70%; }
+    .header-menu-list-item {
+      color: #1a1a1a;
+      letter-spacing: 0.9px;
+      font-family: sans-serif;
+      text-decoration: none; }
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .content-img {
+    width: 50%; }
+  .content-social {
+    margin-left: 15px; }
+    .content-social-item {
+      font-size: 35px;
+      margin: 15px 0; }
+      .content-social-item a {
+        color: #444; }
+
+.music-header {
+  font-size: 26px;
+  color: #1a1a1a;
+  margin: 30px 10px;
+  font-family: sans-serif; }
+.music-item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; }
+
+.contact {
+  padding-bottom: 30px;
+  margin-left: 10px; }
+  .contact-header {
+    font-size: 26px;
+    color: #1a1a1a;
+    margin: 30px 10px;
+    font-family: sans-serif; }
+  .contact-item {
+    color: grey;
+    font-family: sans-serif;
+    font-weight: 100;
+    margin-bottom: 10px;
+    font-size: 14px; }
+
+.footer {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-left: 10px; }
+  .footer-item {
+    color: gray;
+    font-weight: 100;
+    font-family: sans-serif;
+    font-size: 11px; }
+
+/*# sourceMappingURL=index.css.map */
